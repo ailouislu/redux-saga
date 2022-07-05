@@ -3,8 +3,9 @@ It is an example for using redux-saga.
 
 ## Getting started
 
-To get the backend running locally:
+To get the frontend running locally:
 
 - Clone this repo
-- Download Sources through pom.xml file
-- Run the BooksSpringbootApplication file
+- `npm install` to install all req'd dependencies
+- `npm start` to start the local server (this project uses create-react-app)
+- `npm test` to start the local testing
