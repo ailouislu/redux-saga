@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Counter from "./Counter";
-import { getUser, getIsFixedRate } from "./redux/ducks/user";
+import { getUser } from "./redux/ducks/user";
+import { getInterestRateType, getIsFixedRate } from "./redux/ducks/LendingAccountDetails";
 import "./styles.css";
 
 export default function App() {
@@ -10,15 +11,14 @@ export default function App() {
   useEffect(() => {
     dispatch(getUser());
     dispatch(getIsFixedRate());
+    dispatch(getInterestRateType());
   }, [dispatch]);
 
   const user = useSelector((state) => state.user.user);
-  console.log('user', user);
-  const isFixedRate = useSelector((state) => state.user.isFixedRate);
-  console.log('isFixedRate', isFixedRate);
+  const interestRateType = useSelector((state) => state.LendingAccountDetails.interestRateType);
+  const isFixedRate = useSelector((state) => state.LendingAccountDetails.isFixedRate);
 
   const count = useSelector((state) => state.counter.count);
-  console.log(count);
   const voters = [
     "Anthony Sistilli ",
     "Bob Smith",
@@ -28,7 +28,8 @@ export default function App() {
   return (
     <div className="App">
       {user && <h1> Hello, {user.firstName}  </h1>}
-      <h1>Redux made easy, {isFixedRate}</h1>
+      <h1>{`Your Interest Rate Type is: ${interestRateType}`}</h1>
+      <h1>Is it Fixed Rate? {String(isFixedRate)}</h1>
       <h2> Total Votes: {count}</h2>
       {voters.map((voter) => (
         <Counter key={voter} name={voter} />
