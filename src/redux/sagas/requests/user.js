@@ -6,7 +6,3 @@ export function requestGetUser() {
     url: "https://my-json-server.typicode.com/atothey/demo/user"
   });
 }
-
-export function requestGetIsFixedRate() {
-  return true;
-}
