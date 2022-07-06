@@ -1,8 +1,6 @@
-import { call, put } from "redux-saga/effects";
-import { takeLatest } from "redux-saga/effects";
-import { setUser } from "../reducers/userReducer";
+import { call, put, takeLatest } from "redux-saga/effects";
 import { requestGetUser } from "../../services/userService";
-import { GET_USER } from "../reducers/userReducer";
+import { GET_USER, setUser } from "../reducers/userReducer";
 
 function* handleGetUser() {
   try {

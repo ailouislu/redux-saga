@@ -29,12 +29,14 @@ export const getIsFixedRate = () => ({
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_INTEREST_RATE_TYPE:
+    case SET_INTEREST_RATE_TYPE: {
       const { interestRateType } = action;
       return { ...state, interestRateType };
-    case SET_IS_FIXED_RATE:
+    }
+    case SET_IS_FIXED_RATE: {
       const { isFixedRate } = action;
       return { ...state, isFixedRate };
+    }
     default:
       return state;
   }
