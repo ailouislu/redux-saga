@@ -3,6 +3,11 @@ const SET_INTEREST_RATE_TYPE = "SET_INTEREST_RATE_TYPE";
 export const GET_IS_FIXED_RATE = "GET_IS_FIXED_RATE";
 const SET_IS_FIXED_RATE= "SET_IS_FIXED_RATE";
 
+const initialState = {
+  interestRateType: undefined,
+  isFixedRate: undefined
+};
+
 export const getInterestRateType = () => ({
   type: GET_INTEREST_RATE_TYPE
 });
@@ -22,12 +27,7 @@ export const getIsFixedRate = () => ({
 });
 
 
-const initialState = {
-  interestRateType: undefined,
-  isFixedRate: undefined
-};
-
-export default (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_INTEREST_RATE_TYPE:
       const { interestRateType } = action;

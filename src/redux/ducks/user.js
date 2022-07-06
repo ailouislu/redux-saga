@@ -15,7 +15,7 @@ const initialState = {
   user: undefined
 };
 
-export default (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
       const { user } = action;
