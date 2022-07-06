@@ -1,5 +1,5 @@
-import { LendingAccountDetailsSaga } from "./handlers/LendingAccountDetailsSaga";
-import { userSaga } from "./handlers/user";
+import { LendingAccountDetailsSaga } from "./LendingAccountDetailsSaga";
+import { userSaga } from "./userSaga";
 
 
 export function* rootSaga() {

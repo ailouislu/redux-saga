@@ -1,8 +1,8 @@
 import { call, put } from "redux-saga/effects";
 import { takeLatest } from "redux-saga/effects";
-import { setInterestRateType, setIsFixedRate } from "../../ducks/LendingAccountDetails";
-import { GET_INTEREST_RATE_TYPE, GET_IS_FIXED_RATE } from "../../ducks/LendingAccountDetails";
-import { getInterestRateType, getIsFixedRate } from "../requests/LendingAccountDetailsService";
+import { setInterestRateType, setIsFixedRate } from "../reducers/LendingAccountDetailsReducer";
+import { GET_INTEREST_RATE_TYPE, GET_IS_FIXED_RATE } from "../reducers/LendingAccountDetailsReducer";
+import { getInterestRateType, getIsFixedRate } from "../../services/LendingAccountDetailsService";
 
 function* handleGetInterestRateType() {
   try {

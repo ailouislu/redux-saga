@@ -1,8 +1,8 @@
 import { call, put } from "redux-saga/effects";
 import { takeLatest } from "redux-saga/effects";
-import { setUser } from "../../ducks/user";
-import { requestGetUser } from "../requests/user";
-import { GET_USER } from "../../ducks/user";
+import { setUser } from "../reducers/userReducer";
+import { requestGetUser } from "../../services/userService";
+import { GET_USER } from "../reducers/userReducer";
 
 function* handleGetUser() {
   try {

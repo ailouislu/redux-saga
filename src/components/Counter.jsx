@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { decrement, increment } from "./redux/ducks/counter";
+import { decrement, increment } from "../redux/reducers/counterReducer";
 
 const Counter = (props) => {
   const { name } = props;

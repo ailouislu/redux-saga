@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Counter from "./Counter";
-import { getUser } from "./redux/ducks/user";
-import { getInterestRateType, getIsFixedRate } from "./redux/ducks/LendingAccountDetails";
-import "./styles.css";
+import Counter from "./components/Counter";
+import { getUser } from "./redux/reducers/userReducer";
+import { getInterestRateType, getIsFixedRate } from "./redux/reducers/LendingAccountDetailsReducer";
+import "./styles/styles.css";
 
 export default function App() {
   const dispatch = useDispatch();
