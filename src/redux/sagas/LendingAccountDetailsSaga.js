@@ -22,7 +22,7 @@ function* handleGetIsFixedRate() {
   }
 }
 
-export function* LendingAccountDetailsSaga() {
+export function* lendingAccountDetailsSaga() {
   yield takeLatest(GET_IS_FIXED_RATE, handleGetIsFixedRate);
   yield takeLatest(GET_INTEREST_RATE_TYPE, handleGetInterestRateType);
 }

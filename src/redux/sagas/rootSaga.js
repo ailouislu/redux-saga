@@ -1,8 +1,8 @@
-import { LendingAccountDetailsSaga } from "./LendingAccountDetailsSaga";
+import { lendingAccountDetailsSaga } from "./LendingAccountDetailsSaga";
 import { userSaga } from "./userSaga";
 
 
 export function* rootSaga() {
-  yield* LendingAccountDetailsSaga();
+  yield* lendingAccountDetailsSaga();
   yield* userSaga();
 }
